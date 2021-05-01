@@ -1,0 +1,33 @@
+img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.user{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+    display: flex;
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #F5F5F5;
+    align-items: center;
+}
+
+
+.user:hover{
+    background-color: #F5F5F5;
+}
+
+span{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.first-user{
+    display: flex;
+    align-items: center;
+}

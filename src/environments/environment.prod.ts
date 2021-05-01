@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl:'https://reqres.in/api',
+  posturl:'https://jsonplaceholder.typicode.com/'
 };

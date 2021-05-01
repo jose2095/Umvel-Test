@@ -1,0 +1,9 @@
+<div class="post-container">
+    <div class="header">
+        <span>{{posts?.title}}</span>
+        <button  color="warn" (click)="deletePost(posts?.id)"><mat-icon>delete</mat-icon></button>
+    </div>
+    <div class="body">
+        {{posts?.body}}
+    </div>
+</div>

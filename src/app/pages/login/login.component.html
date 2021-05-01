@@ -1,0 +1,41 @@
+<div class="main-container">
+    <div class="login-container">
+        <h1>Iniciar sesión</h1>
+        <form [formGroup]="authForm">
+            <div class="input-container">
+                <mat-label>Correo electrónico</mat-label>
+                <mat-form-field appearance="outline">
+                    <input formControlName="email" matInput  required type="email">                
+                    <mat-error class="error" *ngIf="authForm.controls.email.hasError('required')">
+                    Éste campo es obligatorio
+                  </mat-error>
+                  <mat-error class="error" *ngIf="authForm.controls.email.hasError('email')">
+                    Formato invalido
+                  </mat-error>
+                </mat-form-field>
+
+            </div>
+
+            <div class="input-container">
+                <mat-label>Password</mat-label>
+                <mat-form-field appearance="outline">
+                    <input formControlName="password" matInput type="password" required>
+                    <mat-error class="error" *ngIf="authForm.controls.password.hasError('required')">
+                        Éste campo es obligatorio
+                      </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div>
+                <button 
+                (click)="login()"
+                [disabled]="authForm.invalid || loading"
+                >
+                <mat-icon *ngIf="loading" style="margin-right: 5px;"><mat-spinner diameter="20">
+                </mat-spinner></mat-icon>
+                Inciar sesión</button>
+            </div>
+        </form>
+
+    </div>
+</div>

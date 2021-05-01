@@ -1,0 +1,41 @@
+<mat-drawer-container class="example-container cont ">
+    <mat-drawer mode="side" opened #sidenav>
+      <div id="mostrador">
+    
+        <h1 id="bienvenida">
+          Welcome
+        </h1>
+        <div class="info-sidebar">
+
+          <mat-list>
+            <mat-list-item class="list-m" [routerLink]="['/content']">
+              <mat-icon mat-list-icon>subject</mat-icon>
+              <div class="menu-title" mat-line>Posts</div>
+              <span class="material-icons alright">arrow_right</span>
+            </mat-list-item>
+            <mat-list-item class="list-m" [routerLink]="['/content']">
+              <mat-icon mat-list-icon>person</mat-icon>
+              <div class="menu-title" mat-line>Users</div>
+              <span class="material-icons">arrow_right</span>
+            </mat-list-item>
+
+          </mat-list>
+  
+          <div class="cerrar-sesion">
+            <mat-list>
+              <mat-list-item class="list-m" (click)="_authService.logOut()">
+                <mat-icon mat-list-icon>power_settings_new</mat-icon>
+                <div class="menu-title" mat-line>Log out</div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+        </div>
+      </div>
+    </mat-drawer>
+    <mat-drawer-content>
+      <button mat-mini-fab id="menu" (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+  </mat-drawer-container>

@@ -1,0 +1,21 @@
+<div class="detail-container">
+    <div class="img-container">
+        <img [src]="user?.avatar" alt="">
+        <div class="info-container">
+
+            <h2><strong>Id: </strong> {{user?.id}}</h2>
+            <h2><strong>First name: </strong> <input autocomplete="false" [(ngModel)]="user.first_name" type="text"></h2>
+            <h2><strong>Last name: </strong><input type="text" [(ngModel)]="user.last_name"></h2>
+            <h2><strong>Email: </strong> <input type="text" [(ngModel)]="user.email"></h2>
+
+
+
+<!--             <h2><strong>Id: </strong> {{user?.id}}</h2>
+            <h2><strong>First name: </strong>{{user?.first_name}}</h2>
+            <h2><strong>Last name: </strong>{{user?.last_name}}</h2>
+            <h2><strong>Email: </strong>{{user?.email}}</h2> -->
+            
+        </div>
+        <button  mat-button><mat-icon>save</mat-icon></button>
+    </div>
+</div>

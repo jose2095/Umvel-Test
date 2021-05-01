@@ -1,1 +1,71 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html, body { height: 100%; width: 100%;font-family: 'Poppins', sans-serif !important; }
+body { margin: 0;  }
+
+:root{
+   //colors
+   --purple: #7A3294; 
+   --ligth-purple:#D2B4DE;
+   --custom-blue:#257BA6;
+   --primary-blue:#3498DB;
+   --ligth-blue:#D6EAF8;
+   --ligth-gray:#F5F5F5;
+
+   --primary-green:#58D68D;
+   //sizing
+   --margin-t:20px;
+   --margin-b:20px;
+}
+
+h1{
+   font-size: 30px !important;
+   margin-bottom: var(--margin-b);
+   font-family: 'Poppins', sans-serif !important;
+}
+
+mat-form-field{
+   display: flex;
+}
+
+.input-container{
+   display: flex;
+   width: 100%;
+   flex-direction: column;
+   justify-content: center;
+   margin-bottom: var(--margin-b);
+}
+
+.mat-form-field-wrapper
+{
+    width: 100% !important;
+}
+
+button{
+   margin-top: var(--margin-t);
+}
+
+mat-label{
+   font-weight: bold;
+   letter-spacing: 1px;
+}
+
+ // custom scroll 
+ ::-webkit-scrollbar {
+   width: 10px;
+ }
+ 
+ ::-webkit-scrollbar-track {
+   background-color:#F5F5F5 ; 
+   border-radius: 10px;
+ }
+ 
+ ::-webkit-scrollbar-thumb {
+   background: #BFC9CA; 
+   border-radius: 10px;
+ }
+ 
+ ::-webkit-scrollbar-thumb:hover {
+   background: gray; 
+ }
