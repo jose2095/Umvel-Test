@@ -6,7 +6,9 @@ import { Users } from 'src/app/models/users';
 import { PostsService } from 'src/app/services/posts.service';
 import { UsersService } from 'src/app/services/users.service';
 import { Utils } from 'src/app/utils/Utils';
-
+import { ChartType } from 'angular-google-charts'; 
+import { ChangeDetectorRef } from '@angular/core';
+import { MatDrawer } from '@angular/material/sidenav';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -14,6 +16,7 @@ import { Utils } from 'src/app/utils/Utils';
 })
 export class HomeComponent implements OnInit {
   @ViewChild('chart') chart:MatExpansionPanel;
+  @ViewChild('listdrawer') listdrawer:MatDrawer;
 
   public users:Users;
   public posts:Array<Post>=[];
@@ -21,11 +24,19 @@ export class HomeComponent implements OnInit {
   public selectedUser:User;
   public queySearch:string = '';
   private util=new Utils();
-
+  public type:ChartType= ChartType.AreaChart;
+  screenWidth
   data:any= [];
   
 
-  constructor(private _userService:UsersService,private _postService:PostsService) { }
+  constructor(private _userService:UsersService,private _postService:PostsService,private cdr: ChangeDetectorRef) {
+    this.screenWidth = window.innerWidth;
+        
+    window.onresize = () => {
+      this.screenWidth = window.innerWidth;
+      if(this.screenWidth>640){this.listdrawer.open()}
+    }
+  }
 
   ngOnInit(): void {
     this.getUsers('1');
@@ -49,6 +60,9 @@ export class HomeComponent implements OnInit {
     this.getUserDetail(id);
     this.getUserPost(id);
     this.chart.close();
+    if(this.screenWidth<640){
+      this.listdrawer.close();
+    }
   }
 
   private getUserDetail(id:number){

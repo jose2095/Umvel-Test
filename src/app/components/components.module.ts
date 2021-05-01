@@ -10,9 +10,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
-  declarations: [ UserComponent, UserdetailComponent, PostComponent],
+  declarations: [ UserComponent, UserdetailComponent, PostComponent, ToolbarComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -23,6 +24,6 @@ import {MatInputModule} from '@angular/material/input';
     ReactiveFormsModule,
     MatInputModule
   ],
-  exports: [UserComponent,UserdetailComponent,PostComponent]
+  exports: [UserComponent,UserdetailComponent,PostComponent,ToolbarComponent]
 })
 export class ComponentsModule { }

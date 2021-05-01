@@ -13,7 +13,7 @@ export class MainComponent implements OnInit {
 
   constructor(private cdr: ChangeDetectorRef, public _authService:AuthService) {
         this.screenWidth = window.innerWidth;
-    
+        
         window.onresize = () => {
           this.screenWidth = window.innerWidth;
           this.cdr.detectChanges();
@@ -30,4 +30,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+    if(this.screenWidth<1025) {
+      this.drawer.mode='over'; 
+      this.drawer.opened=false
+    }
+  }
 }

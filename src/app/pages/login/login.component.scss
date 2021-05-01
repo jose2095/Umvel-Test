@@ -1,25 +1,26 @@
 .main-container{
     display: flex;
     justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-image: url('https://i.pinimg.com/originals/43/a1/fc/43a1fcc31f8e39e5f90351ded56aa4be.jpg');
+    background-image: url('https://www.wallpapertip.com/wmimgs/99-993442_blue-yellow-abstract-background-christian-images-abstract-background.jpg');
 }
 
 .login-container{
     display: flex;
     justify-content: center;
-    position: absolute;
     flex-direction: column;
     width: 400px;
+    height: 90%;
     top: 25%;
     background: white;
     padding: 20px;
     border-radius: 10px;
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(40px);
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 h1{

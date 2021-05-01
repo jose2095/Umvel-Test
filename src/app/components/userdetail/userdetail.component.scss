@@ -57,3 +57,30 @@ input:disabled{
 button{
     height: 50px;
 }
+
+@media screen and (max-width:800px){
+    img{
+        display: none;
+    }
+
+    .detail-container{
+        justify-content: flex-start;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .info-container{
+        border: none;
+        h2,input{
+            font-size: 12px;
+        }
+
+        input{
+            width: 150px;
+        }
+
+        .name{
+            width: 50px;
+        }
+    }
+}
