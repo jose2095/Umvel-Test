@@ -8,6 +8,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatDialogModule} from '@angular/material/dialog';
 
 const modules:Array<any> = [
   MatInputModule,
@@ -18,7 +19,8 @@ const modules:Array<any> = [
   MatTableModule,
   MatSidenavModule,
   MatListModule,
-  MatExpansionModule
+  MatExpansionModule,
+  MatDialogModule
 ]
 
 @NgModule({

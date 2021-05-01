@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from 'src/app/models/user';
+import { DialogService } from 'src/app/services/dialog.service';
+import { UsersService } from 'src/app/services/users.service';
 
 @Component({
   selector: 'app-userdetail',
@@ -12,7 +13,7 @@ export class UserdetailComponent implements OnInit {
   @Input() user:User;
 
   
-  constructor(private _formBuilder:FormBuilder) { 
+  constructor(private _userService:UsersService,private _dialogService:DialogService) { 
    
   }
 
@@ -25,7 +26,12 @@ ngOnDestroy(): void {
 }
 
   editUser(){
-   
+   this._userService.editUser(this.user)
+   .subscribe(()=>{
+    this._dialogService.open("Done","completed successfully");
+   },err=>{
+    this._dialogService.open("Error","an error occurred");
+   })
   }
 
 }

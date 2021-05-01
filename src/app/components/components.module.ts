@@ -10,10 +10,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { DialogComponent } from './dialog/dialog.component';
+
 
 @NgModule({
-  declarations: [ UserComponent, UserdetailComponent, PostComponent, ToolbarComponent],
+  declarations: [ UserComponent, UserdetailComponent, PostComponent, DialogComponent],
   imports: [
     CommonModule,
     MatToolbarModule,
@@ -24,6 +25,6 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
     ReactiveFormsModule,
     MatInputModule
   ],
-  exports: [UserComponent,UserdetailComponent,PostComponent,ToolbarComponent]
+  exports: [UserComponent,UserdetailComponent,PostComponent]
 })
 export class ComponentsModule { }

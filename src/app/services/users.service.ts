@@ -23,6 +23,6 @@ export class UsersService {
   }
 
   editUser(user:User):Observable<User>{
-    return this._http.post<User>(this.endpoint+user?.id,{user})
+    return this._http.put<User>(this.endpoint+user?.id,{user})
   }
 }
