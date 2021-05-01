@@ -11,6 +11,12 @@ export class DialogService {
     
   }
 
+  /**
+   * shows a dialog with message
+   * 
+   * @param {string} title dialog title  
+   * @param {string} message dialog message 
+   */
   open(title:string,message:string){
     this._dialog.open(DialogComponent,{data:{title,message}});
   }

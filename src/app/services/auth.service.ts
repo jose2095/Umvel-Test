@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
-  //variable declarations
   private endpoint:string = environment.apiUrl+'login';
   public token:BehaviorSubject<string|null>;
   
@@ -22,10 +21,14 @@ export class AuthService {
   }
 
 
+  /**
+   * @return user token
+   */
   public get userToken(): string {
     return this.token.value;
   }
 
+  
   login(user:AuthUser):Observable<AuthResponse>{
     return this._http.post<AuthResponse>(this.endpoint,user)
     .pipe(map(res=>{

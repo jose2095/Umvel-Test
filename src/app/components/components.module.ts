@@ -11,7 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import { DialogComponent } from './dialog/dialog.component';
-
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   declarations: [ UserComponent, UserdetailComponent, PostComponent, DialogComponent],
@@ -23,8 +23,9 @@ import { DialogComponent } from './dialog/dialog.component';
     MatButtonModule,
     FormsModule,
     ReactiveFormsModule,
-    MatInputModule
+    MatInputModule,
+    MatDialogModule
   ],
-  exports: [UserComponent,UserdetailComponent,PostComponent]
+  exports: [UserComponent,UserdetailComponent,PostComponent,DialogComponent]
 })
 export class ComponentsModule { }
