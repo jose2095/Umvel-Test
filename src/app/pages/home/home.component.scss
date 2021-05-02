@@ -29,16 +29,20 @@
   }
 }
 
+
 .detail-container{
   position: relative;
   box-sizing: border-box;
-  width: 100%;
+  width: 100% !important;
   padding: 0 10px 10px 10px;
   height: 100%;
   overflow: auto;
 }
 
 .detail{
+  app-userdetail{
+    width: 100%;
+  }
   position: sticky;
   top: 0;
   background-color: white;

@@ -74,6 +74,13 @@ export class HomeComponent implements OnInit {
     }
   }
 
+  /**
+   * Delete post of array
+   */
+  deletePost(event){
+    this.posts.splice(event,1);
+  }
+
   nextPage() {
     if (this.users.page < this.users.total_pages)
       this.getUsers((this.users.page + 1).toString());
