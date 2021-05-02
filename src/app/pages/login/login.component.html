@@ -5,7 +5,7 @@
             <div class="input-container">
                 <mat-label>Correo electrónico</mat-label>
                 <mat-form-field appearance="outline">
-                    <input formControlName="email" matInput  required type="email">                
+                    <input id="userInput" formControlName="email" matInput  required type="email">                
                     <mat-error class="error" *ngIf="authForm.controls.email.hasError('required')">
                     Éste campo es obligatorio
                   </mat-error>
@@ -19,7 +19,7 @@
             <div class="input-container">
                 <mat-label>Password</mat-label>
                 <mat-form-field appearance="outline">
-                    <input formControlName="password" matInput type="password" required>
+                    <input id="passInput" formControlName="password" matInput type="password" required>
                     <mat-error class="error" *ngIf="authForm.controls.password.hasError('required')">
                         Éste campo es obligatorio
                       </mat-error>
@@ -28,6 +28,7 @@
 
             <div>
                 <button 
+                id="login"
                 (click)="login()"
                 [disabled]="authForm.invalid || loading"
                 >
