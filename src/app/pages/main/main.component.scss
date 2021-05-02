@@ -1,8 +1,4 @@
 
-  .menu{
-    width: 25%;
-  }
-  
   mat-drawer {
     background-color: #F5F5F5;
     color: black;
@@ -12,24 +8,13 @@
     
   }
   
-  .no-padding .mat-dialog-container {
-    padding: 0px !important;
-  }
   
   mat-drawer-content {
     height: 100vh;
     background-color: white;
     overflow: auto;
   }
-  
-
-  button {
-    outline: none !important;
-  }
-  
- 
- 
-  
+   
   .list-m {
     font-size: 19px;
     cursor: pointer;
